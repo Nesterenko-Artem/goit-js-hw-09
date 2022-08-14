@@ -5,9 +5,9 @@ Notiflix.Notify.init({
 
 const refs = {
   form: document.querySelector('.form'),
-  delay: document.querySelector('input[name=delay]'),
-  step: document.querySelector('input[name=step]'),
-  amount: document.querySelector('input[name=amount]'),
+  // delay: document.querySelector('input[name=delay]'),
+  // step: document.querySelector('input[name=step]'),
+  // amount: document.querySelector('input[name=amount]'),
 };
 
 refs.form.addEventListener('submit', onFormSabmit);
@@ -21,18 +21,19 @@ function createPromise(position, delay) {
       } else {
         reject({ position, delay });
       }
-    });
-  }, delay);
+    }, delay);
+  });
 }
 
 function onFormSabmit(e) {
   e.preventDefault();
   const {
     elements: { delay, step, amount },
-  } = e.currentTarget;
+  } = refs.form;
 
   let currentDelay = +delay.value;
-  for (let i = 1; i <= amount.value; i++) {
+
+  for (let i = 1; i <= +amount.value; i++) {
     createPromise(i, currentDelay)
       .then(({ position, delay }) =>
         Notiflix.Notify.success(
