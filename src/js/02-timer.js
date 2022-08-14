@@ -107,10 +107,9 @@ const refs = {
 refs.btnStart.disabled = true;
 
 function onclickStart() {
-    refs.btnStart.disabled = true;
+  refs.btnStart.disabled = true;
   intervalID = setInterval(calculetedTimer, 1000);
-   //  refs.inputDate.disabled = true;
-  console.log(showCount(days, hours, minutes, seconds));
+  //  refs.inputDate.disabled = true;
 }
 
 function calculetedTimer() {
@@ -138,8 +137,9 @@ function validateDate(date1, date2) {
   if (date1 > date2) {
     refs.btnStart.disabled = false;
   } else {
-    Notiflix.Notify.failure('Please choose a date in the future');
-    
+    Notiflix.Notify.failure('Please choose a date in the future', {
+      position: 'center-top'
+    });
   }
 }
 refs.btnStart.addEventListener('click', onclickStart);

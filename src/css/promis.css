@@ -6,3 +6,12 @@
 .form >label{
    margin-bottom: 15px;
 }
+ form > label:nth-child(3){
+   margin-right: -50px;
+ }
+ button{
+       margin-right: -35px;
+ }
+ body{
+   background-color: #8b9bb8;
+ }
