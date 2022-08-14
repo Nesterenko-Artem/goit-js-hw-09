@@ -1,0 +1,43 @@
+/* ===================== */
+body {
+   background-color: #97e4e0;
+}
+
+.container {
+   padding: 50px auto ;
+   text-align: center;
+}
+
+button {
+   background-color: #a2e7a8;
+   border-color: inherit;
+}
+#datetime-picker {
+   border: none;
+   border-bottom: 1px solid;
+   border-color: inherit;
+   text-align: center;
+   background-color: inherit;
+}
+.timer {
+   margin-top: 30px;
+}
+
+.field {
+   display: inline-block;
+   text-align: center;
+   font-weight: 600;
+}
+
+.field:not(:last-child) {
+   margin-right: 20px;
+}
+
+.value {
+   font-size: 40px;
+}
+
+.label {
+   display: block;
+   text-transform: uppercase;
+}
