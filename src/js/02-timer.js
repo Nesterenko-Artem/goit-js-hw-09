@@ -72,7 +72,7 @@
 
 // Для отображения уведомлений пользователю вместо window.alert() используй библиотеку notiflix.
 // ====================================
-
+import Notiflix from 'notiflix';
 import convertMs from './utils/convertMs';
 import flatpickr from 'flatpickr';
 
@@ -138,7 +138,8 @@ function validateDate(date1, date2) {
   if (date1 > date2) {
     refs.btnStart.disabled = false;
   } else {
-    alert('Please choose a date in the future');
+    Notiflix.Notify.failure('Please choose a date in the future');
+    
   }
 }
 refs.btnStart.addEventListener('click', onclickStart);

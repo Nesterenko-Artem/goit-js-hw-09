@@ -18,13 +18,20 @@ body {
 ul{
  list-style: none;
 }
+li{
+  margin-bottom: 5px;
+}
 a{
   text-decoration: none;
+ 
+  transition: all 0.25s ease-out;
 }
-img {
-  display: block;
-  max-width: 100%;
+a:hover{
+  font-size:large;
+  border-bottom: 1px solid #3f37b3;
+
 }
+
 button,input{
   font-size: 20px;
   font-weight: 500;
