@@ -33,14 +33,15 @@ function onFormSabmit(e) {
 
   let currentDelay = +delay.value;
   for (let i = 1; i <= amount.value; i++) {
-  createPromise(i, currentDelay)
-    .then(({ position, delay }) =>
-      Notiflix.Notify.success(`✅ Fulfilled promise ${position} in ${delay}ms`)
-    )
-    .catch(({ position, delay }) =>
-      Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
-    );
-    currentDelay += +step.value 
+    createPromise(i, currentDelay)
+      .then(({ position, delay }) =>
+        Notiflix.Notify.success(
+          `✅ Fulfilled promise ${position} in ${delay}ms`
+        )
+      )
+      .catch(({ position, delay }) =>
+        Notiflix.Notify.failure(`❌ Rejected promise ${position} in ${delay}ms`)
+      );
+    currentDelay += +step.value;
   }
-
 }
